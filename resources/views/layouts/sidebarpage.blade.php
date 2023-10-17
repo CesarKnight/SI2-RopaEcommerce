@@ -16,7 +16,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Tienda de ropa Cheesy</title>
+    <title>@yield('page_title')</title>
 
     <meta name="description" content="" />
 
@@ -146,25 +146,25 @@
   
                 <ul class="menu-sub">
                   <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
-                      <div data-i18n="Without menu">Without menu</div>
+                    <a href="{{route('product.index')}}" class="menu-link">
+                      <div data-i18n="Without menu">Todos los productos</div>
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                      <div data-i18n="Without navbar">Without navbar</div>
+                    <a href="{{route('product.create')}}" class="menu-link">
+                      <div data-i18n="Without navbar">Crear Producto</div>
                     </a>
                   </li>
                 </ul>
               </li>
              
               <li class="menu-item">
-                  <a href="javascript:void(0);" class="menu-link">
+                  <a href="{{route('category.index')}}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-purchase-tag"></i>
                   <div data-i18n="Authentications">Categorias</div>
                   </a>  
               <li class="menu-item">
-                  <a href="javascript:void(0);" class="menu-link">
+                  <a href="{{route('tag.index')}}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-purchase-tag"></i>
                   <div data-i18n="Authentications">Etiquetas</div>
                   </a>
