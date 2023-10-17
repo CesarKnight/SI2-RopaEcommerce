@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::orderby('id','desc')->paginate();
-        return view('dashboard.categories.index',compact("categories"));
+        return view('dashboard.Categories.index',compact("categories"));
     }
 
     /**
@@ -25,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('dashboard.categories.create');
+        return view('dashboard.Categories.create');
     }
 
     /**
@@ -54,7 +54,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
 
-        return view('dashboard.categories.edit',compact('category'));
+        return view('dashboard.Categories.edit',compact('category'));
     }
 
     /**
